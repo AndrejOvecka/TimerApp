@@ -17,11 +17,11 @@ export const TimerDisplay: React.FC<TimerDisplayProps> = ({ timer, label, onTogg
 
   return (
     <div
-      className={`flex items-center space-x-4 ${timer.side === 'left' ? 'flex-row' : 'flex-row-reverse'}`}
+      className={`flex items-center justify-center  ${timer.side === 'left' ? 'flex-row' : 'flex-row-reverse'}`}
     >
       <button
         onClick={onToggle}
-        className={`px-14 py-8 rounded ${timer.isRunning ? 'bg-green-500' : 'bg-blue-500'} text-white`}
+        className={`px-14 py-8 ${timer.side === 'left' ? 'mr-2' : 'ml-2'} w-full rounded ${timer.isRunning ? 'bg-green-500' : 'bg-blue-500'} text-white`}
       >
         {label}
       </button>
