@@ -39,7 +39,7 @@ export default function Home() {
           onClick={resetAllTimers}
           className="px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors text-lg active:bg-red-700 w-60"
         >
-          Reset All Timers
+          Reset Timers
         </button>
       </div>
     </main>
