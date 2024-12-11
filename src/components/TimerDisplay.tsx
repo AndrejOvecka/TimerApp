@@ -25,7 +25,11 @@ export const TimerDisplay: React.FC<TimerDisplayProps> = ({ timer, label, onTogg
       >
         {label}
       </button>
-      <div className="w-24 text-center font-mono">{formatTime(timer.elapsedTime)}</div>
+      <div className="flex flex-col">
+        <div className="w-24 font-mono text-sm">{formatTime(timer.intervalTime)}</div>
+        <div className="w-24 font-mono">{formatTime(timer.elapsedTime)}</div>
+        <div className="w-24 font-mono text-red-500">{formatTime(timer.largerTime)}</div>
+      </div>
     </div>
   );
 };
